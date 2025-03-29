@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes sway-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes sway-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+.animate-fall {
+  animation: fall linear infinite;
+}
+
+.animate-sway-left {
+  animation: sway-left ease-in-out infinite;
+}
+
+.animate-sway-right {
+  animation: sway-right ease-in-out infinite;
+}
